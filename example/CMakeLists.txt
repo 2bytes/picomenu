@@ -1,13 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 
-include(pico_sdk_import.cmake)
+include(../pico_menu.cmake)
 
 project(Menu C CXX ASM)
 
-pico_sdk_init()
-
 add_executable(Menu menu_example.cpp)
-add_subdirectory(../ build)
 
 pico_add_extra_outputs(Menu)
-target_link_libraries(Menu pico_stdlib twobytes_menu)
+target_link_libraries(Menu pico_stdlib pico_menu)

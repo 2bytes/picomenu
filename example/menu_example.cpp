@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include "twobytes_menu.hpp"
+#include "pico_menu.hpp"
 #include "menu_action.hpp"
 #include "pico_display.hpp"
 

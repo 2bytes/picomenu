@@ -25,8 +25,8 @@
             "runToMain": true,
             // Work around for stopping at main on restart
             "postRestartCommands": [
-                // "break main",
-                // "continue"
+                 "break main",
+                 "continue"
             ]
         }
     ]

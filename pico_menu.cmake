@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.19)
 
 set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
 
@@ -24,15 +24,3 @@ target_sources(pico_menu INTERFACE
 target_include_directories(pico_menu INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
 
 target_link_libraries(pico_menu INTERFACE pico_stdlib hardware_spi st7789 pico_display pico_graphics)
-
-# Create doxygen make target to make API documentation.
-# Run "make doxygen" in the build directory after running cmake to make the documentation.
-# Choose which type of documentation you want below:
-set(DOXYGEN_GENERATE_HTML YES)
-set(DOXYGEN_GENERATE_MAN NO)
-
-doxygen_add_docs(
-    doxygen
-    ${PROJECT_SOURCE_DIR}
-    COMMENT "Generate API documentation"
-)
